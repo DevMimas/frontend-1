@@ -85,7 +85,7 @@ class Template extends Component {
 								name='email'
 								placeholder='Enter Email...'
 								className='input-field'
-								value="info@e-edu.the-morpheus.de"
+								value="test@e-edu.the-morpheus.de"
 								required
 								onChange={this.handleEmailChange}
 							/>

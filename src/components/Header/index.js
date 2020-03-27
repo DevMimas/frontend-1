@@ -12,7 +12,9 @@ class Header extends Component {
 					<div className='headerNavbar'>
 						<div className="logo">
 							<img src="assets/logo.svg" alt="" width="1.6rem"/>
-							<h1 id='title'>E-EDU</h1>
+							<Link to={'/'} style={{textDecoration: "none"}}>
+								<h1 id='title'>E-EDU</h1>
+							</Link>
 						</div>
 						<div id='Button_Box_Landing'>
 							<Link className='BTN_Log' id='Button_Login' to={'/login'}>
@@ -36,7 +38,7 @@ class Header extends Component {
 							<Link to="/imprint" className='BTN_Dash' id='Button_Info'>
 								<img src={Help_Image} alt='Help' />
 							</Link>
-							<Link className='BTN_Dash' id='Button_Logout'>
+							<Link className='BTN_Dash' id='Button_Logout' to="/">
 								<img src={Logout_Image} alt='Logout' />
 							</Link>
 						</div>
