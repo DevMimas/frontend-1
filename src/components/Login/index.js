@@ -10,8 +10,8 @@ class Template extends Component {
 	}
 
 	state = {
-		email: '',
-		password: ''
+		email: 'info@morpheus.de',
+		password: '123456'
 	};
 
 	handleEmailChange = event => {
@@ -51,7 +51,7 @@ class Template extends Component {
 	 * @public
 	 */
 	changeVisibility() {
-		let passwortType = document.getElementById('password');
+		let passwortType = document.getElementById('passwort');
 		let hiddenEye = document.getElementById('hide1');
 		let openEye = document.getElementById('hide2');
 
@@ -85,6 +85,7 @@ class Template extends Component {
 								name='email'
 								placeholder='Enter Email...'
 								className='input-field'
+								value="info@e-edu.the-morpheus.de"
 								required
 								onChange={this.handleEmailChange}
 							/>
@@ -97,6 +98,7 @@ class Template extends Component {
 								id='passwort'
 								placeholder='Enter Password...'
 								className='input-field'
+								value="123456"
 								required
 								onChange={this.handlePasswortChange}
 							/>

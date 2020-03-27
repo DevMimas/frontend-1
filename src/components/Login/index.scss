@@ -4,7 +4,8 @@
 */
 	.box {
 		width: 50vw;
-		height: 35vh;
+		min-height: 35vh;
+		height: auto;
 		padding: 0;
 		background: white;
 		text-align: center;
