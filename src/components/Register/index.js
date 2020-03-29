@@ -14,7 +14,7 @@ const emailRegex = RegExp(
 );
 
 // Validates Form errors
-const formValid = ({ formErrors, ...rest }) => {
+/*const formValid = ({ formErrors, ...rest }) => {
     let valid = true;
 
     Object.values(formErrors).forEach(val => val.length > 0 && (valid = false));
@@ -24,12 +24,13 @@ const formValid = ({ formErrors, ...rest }) => {
         val === null && (valid = false);
     });
 };
+*/
 
 class Register extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            firstName: "",
+            firstName: null,
             lastName: "",
             password: "",
             password2: "",
@@ -55,7 +56,8 @@ class Register extends React.Component {
     handleChange = e => {
         e.preventDefault();
         const { name, value } = e.target;
-        let formErrors = this.state.formErrors;
+        //let formErrors = this.state.formErrors;
+        const { formErrors } = this.state;
 
         console.log("Name: ", name);
         console.log("Value: ", value);
@@ -73,6 +75,13 @@ class Register extends React.Component {
 
             case "role":
                 formErrors.role = value === "" ? "Please select your role" : "";
+                break;
+
+            case "email":
+                formErrors.email = emailRegex.test(value)
+                    ? ""
+                    : "invalid email address";
+                break;
 
             case "password":
                 formErrors.password =
@@ -80,9 +89,7 @@ class Register extends React.Component {
                 break;
             case "password2":
                 formErrors.password2 =
-                    value != value.password
-                        ? "Passwörter sind unterschiedlich"
-                        : "";
+                    value != this.state.password ? "Passwort falsch" : "";
                 break;
             default:
                 console.log("Break");
@@ -163,12 +170,12 @@ class Register extends React.Component {
     handleSubmit = e => {
         e.preventDefault();
 
-        if (formValid(this.state)) {
+        if (this.state.disabled != true) {
             console.log(`
 		-- SUBMITTING --
 		First Name: ${this.state.firstName}
 		Last Name: ${this.state.lastName}
-		Mail: ${this.state.email}
+		Mail: ${this.state.mail}
 		Password: ${this.state.password}
 		Role: ${this.state.role}
 		`);
@@ -301,8 +308,7 @@ class Register extends React.Component {
                                                 className="btn-UI-container"
                                             >
                                                 <button
-                                                    to="/"
-                                                    onClick={this.handleSubmit}
+                                                    to="#"
                                                     type="submit"
                                                     className="btn-UI btn-Base"
                                                     disabled={
