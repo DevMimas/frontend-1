@@ -3,25 +3,23 @@
 .subject-task {
   font-family: HindSiliguri-Regular, sans-serif;
 
-
-  .subject-task-container {
+  .container {
     align-items: center;
     display: flex;
     flex-direction: column;
     width: 80vw;
 
-    .subject-task-content-header {
+    .content-header {
       align-items: baseline;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       width: 100%;
 
-      .subject-task-left {
+      .left {
         padding-left: 4rem;
-        /*margin-top: 34px;*/
 
-        .subject-task-subject {
+        .task-subject {
           color: $color-bluegrey;
           font-family: HindSiliguri-Regular, sans-serif;
           font-size: 60px;
@@ -29,7 +27,7 @@
           margin-top: 34px;
         }
 
-        .subject-task-module {
+        .module {
           color: $color-grey;
           font-size: 32px;
           font-weight: bolder;
@@ -37,7 +35,7 @@
         }
       }
 
-      .subject-task-right {
+      .right {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -47,7 +45,7 @@
           width: 20px;
         }
 
-        .subject-task-points {
+        .points {
           align-items: center;
           color: $color-grey;
           display: flex;
@@ -71,41 +69,41 @@
     margin-top: 42px;
     width: 37.5rem;
 
-    .progress-bar {
+    .bar {
       background-color: #ffe2e2;
       height: 5px;
       margin-right: 682px;
       width: 37.5rem;
 
-      .progress-per {
+      .per {
         background-color: #5bc0be;
         height: 5px;
         width: 40%;
       }
     }
 
-    .subject-task-titel {
+    .title {
       color: #3a506b;
       font-size: 32px;
       font-weight: normal;
       margin-top: 73px;
     }
 
-    .subject-task-description {
+    .description {
       color: #3a506b;
       font-size: 16px;
       margin-top: 30px;
     }
   }
 
-  .subject-task-answer {
+  .answer {
     align-items: center;
     display: flex;
     flex-direction: column;
     font-size: 23px;
     width: 37.5rem;
 
-    .subject-task-answer-header {
+    .header {
       /* display: flex;
             flex-direction: row;
             */
@@ -116,24 +114,34 @@
       width: 100%;
     }
 
-    .subject-task-answerfield {
-      margin-top: 1rem;
+    .fields {
       width: 100%;
 
-      input {
-        border: 1px solid #707070;
+      .field {
+        align-items: center;
+        border: 1px solid;
         border-radius: 8px;
         display: flex;
         flex-direction: row;
-        /*width: 37.5rem;*/
         height: 2rem;
-        justify-content: space-between;
+        justify-content: center;
+        margin-top: 1rem;
         padding-left: 0.5rem;
         width: 100%;
       }
+
+      .field-inactive {
+        border-color: #707070;
+        border-width: 2px;
+      }
+
+      .field-active {
+        border-color: #5bc0be;
+        border-width: 2px;
+      }
     }
 
-    .subject-task-buttons {
+    .buttons {
       display: flex;
       flex-direction: row;
       height: 49px;
@@ -141,22 +149,24 @@
       margin-top: 3.4rem;
       width: 100%;
 
-      .subject-task-skip {
+      .skip {
         background: none;
         border: 1px solid #707070;
         border-radius: 8px;
         font-size: 23px;
         font-weight: normal;
+        height: 2rem;
         text-align: center;
         width: 13.4rem;
       }
 
-      .subject-task-next {
+      .next {
         background-color: #5bc0be;
         border: 1px solid #707070;
         border-radius: 8px;
         font-size: 23px;
         font-weight: normal;
+        height: 2rem;
         text-align: center;
         width: 13.4rem;
       }
