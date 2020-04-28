@@ -22,19 +22,22 @@ class Register extends React.Component {
                                 placeholder="E-Mail"
                                 onChange={(value) => registerStore.setEmail(value.target.value)}
                                 className="text-input"
-                                style={{ height: '2.69rem', width: '28rem' }}
+                                height="2.69rem"
+                                width="28rem"
                             />
                             <TextInput
                                 placeholder="Passwort"
                                 onChange={(value) => registerStore.setPassword(value.target.value)}
                                 className="text-input"
-                                style={{ height: '2.69rem', width: '28rem' }}
+                                height="2.69rem"
+                                width="28rem"
                             />
                             <TextInput
                                 placeholder="Passwort bestätigen"
                                 onChange={(value) => registerStore.setRetypedPassword(value.target.value)}
                                 className="text-input"
-                                style={{ height: '2.69rem', width: '28rem' }}
+                                height="2.69rem"
+                                width="28rem"
                             />
                             <div className="account-type flex-row-box">
                                 <Button
@@ -68,7 +71,8 @@ class Register extends React.Component {
                                     placeholder="Teacher Token"
                                     onChange={(value) => registerStore.setTeacherToken(value.target.value)}
                                     className="text-input teacher-token"
-                                    style={{ height: '2.69rem', width: '15rem' }}
+                                    height="2.69rem"
+                                    width="15rem"
                                 />
                             ) : null}
                             <Button

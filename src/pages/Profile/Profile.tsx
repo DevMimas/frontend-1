@@ -110,7 +110,7 @@ class Profile extends React.Component {
                                 <span className="level-rang">
                                     {t.t('page.profile.rank.teachingMaster', 'The Teaching Master')}
                                 </span>{' '}
-                                {/* TODO change in component */}
+                                {/* TODO ändern in component */}
                             </div>
                         </div>
 

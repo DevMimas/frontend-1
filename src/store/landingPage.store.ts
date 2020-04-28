@@ -1,10 +1,10 @@
 import {observable, action} from "mobx";
 
 class LandingPageStore {
-    @observable redirect = false;
+    @observable showModal = false;
 
-    @action setRedirect(value: boolean) {
-        this.redirect = value;
+    @action setShowModal(value: boolean) {
+        this.showModal = value;
     }
 }
 

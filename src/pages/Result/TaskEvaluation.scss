@@ -1,9 +1,9 @@
 @import './src/css/styles';
 
-.evaluation {
+.result {
   font-family: HindSiliguri-Regular, sans-serif;
 
-  .evaluation-container {
+  .result-container {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -14,19 +14,19 @@
       width: 90%;
     }
 
-    .evaluation-content-header {
+    .result-content-header {
       align-items: baseline;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       width: 100%;
 
-      .evaluation-left {
+      .result-left {
         margin-left: 7.267rem;
         margin-top: 2.267rem;
 
 
-        .evaluation-subject {
+        .result-subject {
           color: $color-bluegrey;
           font-family: HindSiliguri-Regular, sans-serif;
           font-size: 4rem;
@@ -36,14 +36,14 @@
 
         }
 
-        .evaluation-module {
+        .result-module {
           color: $color-grey;
           font-size: 2.133rem;
           font-weight: bolder;
         }
       }
 
-      .evaluation-right {
+      .result-right {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -55,7 +55,7 @@
           width: 1.333rem;
         }
 
-        .evaluation-points {
+        .result-points {
           align-items: center;
           color: $color-grey;
           display: flex;
@@ -96,7 +96,7 @@
       }
     }
 
-    .evaluation-pointcount {
+    .result-pointcount {
       align-items: baseline;
       display: flex;
       flex-direction: row;
@@ -104,14 +104,14 @@
       margin-top: 2rem;
       width: 60rem;
 
-      .evaluation-new-points {
+      .result-new-points {
         color: $color-dark !important;
         font-size: 4rem;
         font-weight: bold;
 
       }
 
-      .evaluation-weekly-points {
+      .result-weekly-points {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -128,10 +128,10 @@
       }
     }
 
-    .evaluation-questions {
+    .result-questions {
       width: 60rem;
 
-      .evaluation-question {
+      .result-question {
         margin: 0.667rem 0;
       }
     }

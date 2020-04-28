@@ -1,5 +1,6 @@
 import React from 'react';
 import MarkdownIt from 'markdown-it';
+import './Markdown.scss';
 
 interface MarkdownProps {
     text: string;

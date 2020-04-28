@@ -1,7 +1,7 @@
 import React from 'react';
 import './TaskList.scss';
 import { Link } from 'react-router-dom';
-import { User, Users, Search } from 'react-feather';
+import { User, Users } from 'react-feather';
 import { observer } from 'mobx-react';
 import { t } from '../../i18n/i18n';
 import Task from '../../components/Task/Task/Task';
@@ -14,7 +14,8 @@ const taskListStore = new TaskListStore();
 
 @observer
 class TaskList extends React.Component {
-    componentDidMount(): void {
+    constructor(props) {
+        super(props);
         this.loadFakeData();
     }
 
@@ -22,12 +23,13 @@ class TaskList extends React.Component {
         // TODO: Backend request
         this.setState({ search: event.target.value });
         taskListStore.setSearch(event.target.value);
+        // FIXME: Adds just new entries
         this.loadFakeData();
     };
 
     loadFakeData() {
         this.setState((task) => ({ task }));
-        taskListStore.setTasks([
+        taskListStore.addTasks([
             {
                 description: 'A short description what to do in this task',
                 difficulty: DifficultyEnum.EASY,
@@ -64,7 +66,6 @@ class TaskList extends React.Component {
     }
 
     render() {
-        // TODO Scrollbar on the bottom, page is to big, ask for new design
         return (
             <div>
                 <div className="task-list main">
@@ -96,11 +97,8 @@ class TaskList extends React.Component {
                         <div className="result-right">
                             <span className="result-subject">
                                 <TextInput placeholder={t.t('page.taskList.search', 'Search')} />
-                                <Search
-                                    size="30"
-                                    color="#3a506b"
-                                    style={{ position: 'absolute', top: '3rem', left: '76rem' }}
-                                />
+
+                                {/* TODO: implement Search icon <Search size="30" color="#3a506b"/> */}
                             </span>
                         </div>
                     </div>

@@ -19,7 +19,7 @@ class Credits extends Component {
                                 <br />
                                 Im Rahmen des <span>#WirVsVirusHackathon</span> 2020
                             </p>
-                            <p className="participants">
+                            <p className="teilnehmende">
                                 An diesem Projekt haben 89 begeisterte
                                 <br />
                                 Entwickler*innen, Designer*innen,
@@ -27,7 +27,7 @@ class Credits extends Component {
                                 Organisator*innen mitgewirkt.
                             </p>
                         </div>
-                        <div className="contributors">
+                        <div className="mitwirkende">
                             <h2 className="subheading">Mitwirkende</h2>
                             <div className="morpheus">
                                 <h3 className="idea">Projektidee</h3>
@@ -37,7 +37,7 @@ class Credits extends Component {
                             </div>
                             <div className="credits-container">
                                 <div className="orga">
-                                    <h4 className="credits-heading">Organisation</h4>
+                                    <h4 className="cerdits-heading">Organisation</h4>
                                     <a href="https://github.com/JannikEmmerich" className="credits-name">
                                         Jannik
                                     </a>
